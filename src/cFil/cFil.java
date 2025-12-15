@@ -1,13 +1,13 @@
 package cFil;
 
 //alternativa: extends Thread
-public class UF2_cFil implements Runnable {
+public class cFil implements Runnable {
 
 	String aNomFil;
 
 	int aTemporitzacio;
 
-	public UF2_cFil(String pNomFil) {
+	public cFil(String pNomFil) {
 
 		aTemporitzacio = 500;
 

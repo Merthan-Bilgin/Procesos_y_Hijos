@@ -1,6 +1,4 @@
-package cFilPrincipal;
-
-import cFil.cFil;
+package cFil;
 
 public class cFilPrincipal {
 
