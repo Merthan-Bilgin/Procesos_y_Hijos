@@ -8,7 +8,7 @@ public class cFilPrincipal {
 		System.out.println("Fil secundari iniciat.");
 
 		cFil vObjecteFil = new cFil("#1");
-
+		vObjecteFil.sTemporitzacio(100); 
 		// alternativa: innecessari
 		Thread vFil = new Thread(vObjecteFil);
 
@@ -21,7 +21,7 @@ public class cFilPrincipal {
 
 			for (int vComptador = 0; vComptador < 10; vComptador++) {
 
-				Thread.sleep(500);
+				Thread.sleep(1000); //1.1
 
 				System.out.println("Despertant aturada " + vComptador + " procès principal");
 
