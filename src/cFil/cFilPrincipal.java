@@ -1,7 +1,5 @@
 package cFil;
 
-import cFil.cFil;
-
 public class cFilPrincipal {
 
 	public static void main(String[] pArguments) {
@@ -10,7 +8,7 @@ public class cFilPrincipal {
 		System.out.println("Fil secundari iniciat.");
 
 		cFil vObjecteFil = new cFil("#1");
-
+		vObjecteFil.sTemporitzacio(1000); 
 		// alternativa: innecessari
 		Thread vFil = new Thread(vObjecteFil);
 
@@ -23,7 +21,7 @@ public class cFilPrincipal {
 
 			for (int vComptador = 0; vComptador < 10; vComptador++) {
 
-				Thread.sleep(500);
+				Thread.sleep(200); //1.2
 
 				System.out.println("Despertant aturada " + vComptador + " procès principal");
 
