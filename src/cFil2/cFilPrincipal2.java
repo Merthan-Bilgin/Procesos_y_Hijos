@@ -1,32 +1,32 @@
-package cFil;
+package cFil2;
 
-public class cFilPrincipal {
+import cFil.cFil;
+
+public class cFilPrincipal2 {
 
 	public static void main(String[] pArguments) {
 
 		System.out.println("Fil principal iniciat.");
 		System.out.println("Fil secundari iniciat.");
-
 		// Creación del proceso hijo
 		cFil vObjecteFil = new cFil("#1");
+		// Temporización grande → el proceso hijo acaba más tarde
+		vObjecteFil.sTemporitzacio(1000); 
 		
-		// Temporización pequeña → el proceso hijo acaba antes
-		vObjecteFil.sTemporitzacio(100); 
 
 		// Se crea el hilo a partir del objeto cFil
 		Thread vFil = new Thread(vObjecteFil);
 
 		// Inicio del proceso hijo
 		vFil.start();
-		
 		// Ejecución del proceso principal
-		System.out.println("Iniciant execució procés principal");
+	System.out.println("Iniciant execució procés principal");
 
 		try {
 			// Bucle del proceso principal
 			for (int vComptador = 0; vComptador < 10; vComptador++) {
-				 // Temporización grande → proceso principal más lento
-				Thread.sleep(1000); //1.1
+				// Temporización pequeña → proceso principal más rápido
+				Thread.sleep(200);
 
 				System.out.println("Despertant aturada " + vComptador + " procès principal");
 
